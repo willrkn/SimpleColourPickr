@@ -15,15 +15,26 @@ import java.awt.Point;
 public class PointerGet {
     private Point b;
     
+    //gets point value 
     public PointerGet(){
         PointerInfo a = MouseInfo.getPointerInfo();
         b = a.getLocation();
     }
     
+    // returns vals of last time PointerGet was ran
+    public int getX(){
+       double x = this.b.getX();
+       return (int) x;
+    }
+    public int getY(){
+       double y = this.b.getY();
+       return (int) y;
+    }
+    
+    //printing for test purposes
     public void printX(){
         System.out.println(this.b.getX());
     }
-    
     public void printY(){
         System.out.println(this.b.getY());
     }
