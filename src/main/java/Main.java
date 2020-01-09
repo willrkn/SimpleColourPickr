@@ -4,29 +4,32 @@
  * and open the template in the editor.
  */
 
+import java.awt.MouseInfo;
+import java.awt.PointerInfo;
+import java.awt.Point;
+
 /**
  *
  * @author Will
  */
 
 import java.util.Scanner;
-import java.awt.Robot;
-import java.awt.Color;
 
 public class Main {
     public static void main(String[] args) throws Exception{
         Scanner reader = new Scanner(System.in);
-        String rgb = "null";
-        Robot r = new Robot();
         
         System.out.println("Type the X Co-ordinate");
-        int xval = Integer.parseInt(reader.nextLine());
+        int x = Integer.parseInt(reader.nextLine());
         
         System.out.println("Type the Y Co-ordinate");
-        int yval = Integer.parseInt(reader.nextLine());
+        int y = Integer.parseInt(reader.nextLine());
         
-        Color colour = r.getPixelColor(xval, yval);
+        ColourGet pixel = new ColourGet(x, y);
+        pixel.printColour();
         
-        System.out.println(colour);
+        PointerGet point = new PointerGet();
+        point.printX();
+        point.printY();
     }
 }
