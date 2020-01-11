@@ -1,3 +1,6 @@
 PointerGet.class
 Main.class
+KeyEventDispatcher.class
 ColourGet.class
+KeyPressDetect$1.class
+KeyPressDetect.class

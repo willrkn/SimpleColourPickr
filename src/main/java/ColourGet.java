@@ -13,13 +13,19 @@ import java.awt.Color;
  * @author Will
  */
 public class ColourGet {
+    private Color currentColour;
     private String rgb = "null";
     private final Robot r = new Robot();
         
     // gets rgb value of xy
     public ColourGet(int x, int y) throws Exception{
         Color colour = r.getPixelColor(x, y);
+        currentColour = colour;
         rgb = colour.toString();
+    }
+    
+    public Color getColour(){
+        return currentColour;
     }
     
     public void printColour(){

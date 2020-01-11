@@ -30,12 +30,4 @@ public class PointerGet {
        double y = this.b.getY();
        return (int) y;
     }
-    
-    //printing for test purposes
-    public void printX(){
-        System.out.println(this.b.getX());
-    }
-    public void printY(){
-        System.out.println(this.b.getY());
-    }
 }
